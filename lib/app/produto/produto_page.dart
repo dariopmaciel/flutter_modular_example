@@ -9,14 +9,12 @@ class ProdutoPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text(''),
+        title: const Text('Categoria'),
       ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text(Modular.args?.data),
-            
             Text(produto ?? "Nome não enviado"),
           ],
         ),

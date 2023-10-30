@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_modular/flutter_modular.dart';
 
 class SplashPage extends StatelessWidget {
   const SplashPage({super.key});
@@ -15,7 +16,10 @@ class SplashPage extends StatelessWidget {
           children: [
             ElevatedButton(
               onPressed: () {
-                Navigator.pushNamed(context, '/categoria');
+                // Navigator.pushNamed(context, '/categoria', arguments: 'Categoria Selecionada @@@');
+                //ou
+                Modular.to.pushNamed('/categoria', arguments: 'Categoria Selecionada @@@');
+                // Modular.to.pushNamed('/categoria');
               },
               child: const Text('Categoria Module'),
             )

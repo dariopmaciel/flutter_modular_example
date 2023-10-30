@@ -7,8 +7,5 @@ import 'package:flutter_modular_example/app/app_widget.dart';
 // O modulo cria uma camada superior que passara para o runApp a pagina certa que é a pagina que se precisa carregar
 
 void main() {
-  runApp(ModularApp(
-    module: AppModule(),
-    child: AppWidget(),
-  ));
+  runApp(ModularApp(module: AppModule(), child: AppWidget()));
 }

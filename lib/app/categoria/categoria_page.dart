@@ -25,9 +25,10 @@ class _CategoriaPageState extends State<CategoriaPage> {
       ),
       body: Center(
           //recuperando sem Modular
-          // child: Text(widget.categoria ?? "Não foi enviado a Categoria")),
+          child: Text(widget.categoria ?? "Não foi enviado a Categoria")),
           //recuperando com modular
-          child: Text(Modular.args?.data ?? "Não foi enviado a Categoria")),
+          // child: Text(Modular.args?.data ?? "Não foi enviado a Categoria")),
+          
     );
   }
 }

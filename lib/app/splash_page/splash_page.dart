@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 
+
 class SplashPage extends StatelessWidget {
   const SplashPage({super.key});
 
@@ -18,11 +19,27 @@ class SplashPage extends StatelessWidget {
               onPressed: () {
                 // Navigator.pushNamed(context, '/categoria', arguments: 'Categoria Selecionada @@@');
                 //ou
-                Modular.to.pushNamed('/categoria', arguments: 'Categoria Selecionada @@@');
-                // Modular.to.pushNamed('/categoria');
+                //--->Args recupera pelo Modular.args.data
+                Modular.to.pushNamed('/categoria',
+                    arguments: 'Categoria Selecionada @@@');
+                
               },
               child: const Text('Categoria Module'),
-            )
+            ),
+            ElevatedButton(
+                onPressed: () {
+                  //Recupera pelo NamedParameters: regupera pelo args params
+                  Modular.to.pushNamed('/produto/Produto_X/xyz',
+                      arguments: 'Produto Selecionado @@@');
+                },
+                child: const Text("Produto Module")),
+                ElevatedButton(
+                onPressed: () {
+                  //Recupera pelo Querry Parameters que recupera pelo QuerryParams
+                  Modular.to.pushNamed('/produto/xyz?produto=Dario',
+                      arguments: 'Produto Selecionado @@@');
+                },
+                child: const Text("Produto Query Param Module")),
           ],
         ),
       ),

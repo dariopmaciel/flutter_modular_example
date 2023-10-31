@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_modular/flutter_modular.dart';
 
 class ProdutoPage extends StatelessWidget {
   final String? produto;
@@ -16,6 +15,7 @@ class ProdutoPage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(produto ?? "Nome não enviado"),
+            TextButton(onPressed: () {}, child: const Text("Get Preço"))
           ],
         ),
       ),

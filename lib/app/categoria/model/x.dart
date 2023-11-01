@@ -1,4 +1,1 @@
-
-class X {
-  
-}
+class X {}

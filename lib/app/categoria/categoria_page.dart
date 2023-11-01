@@ -19,6 +19,9 @@ class CategoriaPage extends StatefulWidget {
 }
 
 class _CategoriaPageState extends State<CategoriaPage> {
+  final controller = Modular.get<CategoriaController>();
+  final controller2 = Modular.get<PrecoModel>();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -33,17 +36,15 @@ class _CategoriaPageState extends State<CategoriaPage> {
             Text(widget.categoria ?? "Não foi enviado a Categoria"),
             ElevatedButton(
               onPressed: () {
-                var controller = Modular.get<CategoriaController>();
                 print('Categoria Controller hashCode: ${controller.hashCode}');
               },
               child: const Text("Get Controller"),
             ),
             ElevatedButton(
               onPressed: () {
-                var controller2 = Modular.get<PrecoModel>();
                 print('Categoria Controller hashCode: ${controller2.hashCode}');
               },
-              child: Text('Get Preço'),
+              child: const Text('Get Preço'),
             ),
           ],
         ),

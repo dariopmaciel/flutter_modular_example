@@ -1,13 +1,13 @@
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:flutter_modular_example/app/categoria/categoria_page.dart';
+import 'package:flutter_modular_example/app/categoria/model/categoria_controller.dart';
 
 import 'package:flutter_modular_example/app/produto/produto_module.dart';
 
 class CategoriaModule extends Module {
-
-@override
+  @override
   void binds(Injector i) {
-    i.addLazySingleton();
+    i.addLazySingleton(CategoriaController.new);
     super.binds(i);
   }
 

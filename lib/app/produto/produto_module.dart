@@ -3,11 +3,7 @@ import 'package:flutter_modular_example/app/categoria/categoria_module.dart';
 import 'package:flutter_modular_example/app/produto/produto_page.dart';
 
 class ProdutoModule extends Module {
-  @override
-  void binds(Injector i) {
-    // i.addLazySingleton(PrecoModel.new);
-    super.binds(i);
-  }
+ 
 
   @override
   List<Module> get imports => [

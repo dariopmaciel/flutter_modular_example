@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:flutter_modular_example/app/categoria/model/categoria_controller.dart';
+import 'package:flutter_modular_example/app/categoria/model/preco_model.dart';
 
 class CategoriaPage extends StatefulWidget {
   final String? categoria;
@@ -8,7 +9,7 @@ class CategoriaPage extends StatefulWidget {
   CategoriaPage({
     Key? key,
     this.categoria,
-  })  :
+  }) :
         //ou
         // categoria = Modular.args?.data,
         super(key: key);
@@ -36,6 +37,13 @@ class _CategoriaPageState extends State<CategoriaPage> {
                 print('Categoria Controller hashCode: ${controller.hashCode}');
               },
               child: const Text("Get Controller"),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                var controller2 = Modular.get<PrecoModel>();
+                print('Categoria Controller hashCode: ${controller2.hashCode}');
+              },
+              child: Text('Get Preço'),
             ),
           ],
         ),

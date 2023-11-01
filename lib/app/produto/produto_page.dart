@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_modular/flutter_modular.dart';
+import 'package:flutter_modular_example/app/categoria/model/preco_model.dart';
 
 
 class ProdutoPage extends StatefulWidget {
@@ -23,8 +25,8 @@ class _ProdutoPageState extends State<ProdutoPage> {
             Text(widget.produto ?? "Nome não enviado"),
             ElevatedButton(
               onPressed: () {
-                // var preco = Modular.get<PrecoModel>();
-                // print('${preco.hashCode}');
+                var preco = Modular.get<PrecoModel>();
+                print('${preco.hashCode}');
               },
               child: const Text("Get Preço"),
             ),
